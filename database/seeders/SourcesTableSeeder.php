@@ -39,7 +39,9 @@ class SourcesTableSeeder extends Seeder
                     ['name' => 'Mike Spencer'],
                     ['name' => 'Elijah Obrien'],
                 ],
-                'campaign_types' => ['name' => 'Social Media Marketing Campaign Type', 'sort_by' => '10']
+                'campaign_types' => [
+                    ['name' => 'Social Media Marketing Campaign Type', 'sort_by' => '10']
+                ]
             ],
             [
                 'name' => 'Outlook', 'sort_by' => '10', 'type' => 'em',
@@ -48,7 +50,9 @@ class SourcesTableSeeder extends Seeder
                     ['name' => 'jhamilton@medcaremsoservices.com'],
                     ['name' => 'kpeterson@medcaremsoservices.com'],
                 ],
-                'campaign_types' => ['name' => 'Email Marketing Campaign Type', 'sort_by' => '10']
+                'campaign_types' => [
+                    ['name' => 'Email Marketing Campaign Type', 'sort_by' => '10']
+                ]
             ]
         ];
 
