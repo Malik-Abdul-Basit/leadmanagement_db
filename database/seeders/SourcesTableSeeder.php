@@ -17,11 +17,13 @@ class SourcesTableSeeder extends Seeder
         $arraies = [
             [
                 'name' => 'Google Ads', 'sort_by' => '10', 'type' => 'seo',
-                'accounts' => []
+                'accounts' => [],
+                'campaign_types' => []
             ],
             [
                 'name' => 'Generic', 'sort_by' => '20', 'type' => 'seo',
-                'accounts' => []
+                'accounts' => [],
+                'campaign_types' => []
             ],
             [
                 'name' => 'LinkedIn', 'sort_by' => '10', 'type' => 'smm',
@@ -37,6 +39,7 @@ class SourcesTableSeeder extends Seeder
                     ['name' => 'Mike Spencer'],
                     ['name' => 'Elijah Obrien'],
                 ],
+                'campaign_types' => ['name' => 'Social Media Marketing Campaign Type', 'sort_by' => '10']
             ],
             [
                 'name' => 'Outlook', 'sort_by' => '10', 'type' => 'em',
@@ -45,6 +48,7 @@ class SourcesTableSeeder extends Seeder
                     ['name' => 'jhamilton@medcaremsoservices.com'],
                     ['name' => 'kpeterson@medcaremsoservices.com'],
                 ],
+                'campaign_types' => ['name' => 'Email Marketing Campaign Type', 'sort_by' => '10']
             ]
         ];
 
@@ -65,6 +69,8 @@ class SourcesTableSeeder extends Seeder
                 $source_id = $source->id;
                 $type = $array['type'];
                 $accounts = $array['accounts'];
+                $campaign_types = $array['campaign_types'];
+
                 if(count($accounts) > 0 ){
                     foreach ($accounts as $account) {
                         try {
@@ -86,6 +92,29 @@ class SourcesTableSeeder extends Seeder
                         }
                     }
                 }
+
+                if(count($campaign_types) > 0 ){
+                    foreach ($campaign_types as $campaign_type) {
+                        try {
+                            \App\Models\CampaignType::create(
+                                [
+                                    'name' => $campaign_type['name'],
+                                    'sort_by' =>  $campaign_type['sort_by'],
+                                    'type' => $type,
+                                    'added_by' => 1,
+                                    'company_id' => 1,
+                                    'branch_id' => 1,
+                                    'created_at' => $now,
+                                    'updated_at' => $now
+                                ]
+                            );
+                        }
+                        catch (Exception $e) {
+                            Log::error($e->getMessage(),['FILE'=> __FILE__, 'FUNCTION' => __FUNCTION__]);
+                        }
+                    }
+                }
+
             } catch (Exception $e) {
                 Log::error($e->getMessage(), ['FILE' => __FILE__, 'FUNCTION' => __FUNCTION__]);
             }
