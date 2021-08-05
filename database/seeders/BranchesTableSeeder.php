@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class BranchesSeeder extends Seeder
+class BranchesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class BranchesSeeder extends Seeder
      */
     public function run()
     {
-        \App\Branch::create(
+        \App\Models\Branch::create(
             [
                 'name' => 'Medcare MSO FSD',
                 'company_email' => 'info@medcaremso.com',

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class SubMenusSeeder extends Seeder
+class SubMenusTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -163,7 +163,7 @@ class SubMenusSeeder extends Seeder
 
         foreach ($arraies as $array) {
             try {
-                $SubMenu = \App\SubMenu::create(
+                $SubMenu = \App\Models\SubMenu::create(
                     [
                         'name' => $array['name'],
                         'sort_by' => $array['sort_by'],
@@ -178,7 +178,7 @@ class SubMenusSeeder extends Seeder
                 $child_menus = $array['child_menus'];
                 foreach ($child_menus as $child_menu) {
                     try {
-                        \App\ChildMenu::create(
+                        \App\Models\ChildMenu::create(
                             [
                                 'display_name' => $child_menu['display_name'],
                                 'file_name' => $child_menu['file_name'],

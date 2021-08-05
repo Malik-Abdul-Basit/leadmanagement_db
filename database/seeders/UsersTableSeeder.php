@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class UsersSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -155,7 +155,7 @@ class UsersSeeder extends Seeder
 
         foreach ($arraies as $array) {
             try {
-                \App\User::create(
+                \App\Models\User::create(
                     [
                         'employee_code' => $array['employee_code'],
                         'title' => $array['title'],

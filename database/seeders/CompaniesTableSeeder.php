@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class CompaniesSeeder extends Seeder
+class CompaniesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class CompaniesSeeder extends Seeder
      */
     public function run()
     {
-        \App\Company::create(
+        \App\Models\Company::create(
             [
                 'name' => 'Medcare MSO',
                 'image_name' => 'default_image',

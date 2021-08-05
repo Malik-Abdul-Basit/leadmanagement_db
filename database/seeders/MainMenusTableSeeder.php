@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class MainMenusSeeder extends Seeder
+class MainMenusTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -172,7 +172,7 @@ class MainMenusSeeder extends Seeder
 
         foreach ($arraies as $array) {
             try {
-                \App\MainMenu::create(
+                \App\Models\MainMenu::create(
                     [
                         'name' => $array['name'],
                         'sort_by' => $array['sort_by'],

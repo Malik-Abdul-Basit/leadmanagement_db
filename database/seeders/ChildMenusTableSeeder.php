@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class AccountsSeeder extends Seeder
+class ChildMenusTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
