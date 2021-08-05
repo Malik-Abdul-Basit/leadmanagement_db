@@ -1,0 +1,41 @@
+php artisan make:model Account
+php artisan make:model Branch
+php artisan make:model Campaign
+php artisan make:model CampaignType
+php artisan make:model ChildMenu
+php artisan make:model Company
+php artisan make:model Lead
+php artisan make:model LeadMessage
+php artisan make:model MainMenu
+php artisan make:model Notification
+php artisan make:model SalesPerson
+php artisan make:model SeoCampaign
+php artisan make:model SeoLead
+php artisan make:model SeoLeadMessage
+php artisan make:model Source
+php artisan make:model User
+
+
+php artisan make:seeder AccountsTableSeeder
+php artisan make:seeder BranchesTableSeeder
+php artisan make:seeder CampaignsTableSeeder
+php artisan make:seeder CampaignTypesTableSeeder
+php artisan make:seeder ChildMenusTableSeeder
+php artisan make:seeder CompaniesTableSeeder
+php artisan make:seeder LeadMessagesTableSeeder
+php artisan make:seeder LeadsTableSeeder
+php artisan make:seeder MainMenusTableSeeder
+php artisan make:seeder NotificationsTableSeeder
+php artisan make:seeder SalesPersonsTableSeeder
+php artisan make:seeder SeoCampaignsTableSeeder
+php artisan make:seeder SeoLeadMessagesTableSeeder
+php artisan make:seeder SeoLeadsTableSeeder
+php artisan make:seeder SourcesTableSeeder
+php artisan make:seeder SubMenusTableSeeder
+php artisan make:seeder UsersTableSeeder
+
+
+
+
+
+
