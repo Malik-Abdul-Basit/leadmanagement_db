@@ -28,16 +28,16 @@ class SourcesTableSeeder extends Seeder
             [
                 'name' => 'LinkedIn', 'sort_by' => '10', 'type' => 'smm',
                 'accounts' => [
-                    ['name' => 'Roger Adams'],
-                    ['name' => 'Bill Carter'],
-                    ['name' => 'Beth Luckner'],
-                    ['name' => 'Chris Rogers'],
-                    ['name' => 'Josh Hamilton'],
-                    ['name' => 'Jim Collins'],
-                    ['name' => 'Kevin Peterson'],
                     ['name' => 'Andrew Allison'],
-                    ['name' => 'Mike Spencer'],
+                    ['name' => 'Beth Luckner'],
+                    ['name' => 'Bill Carter'],
+                    ['name' => 'Chris Rogers'],
                     ['name' => 'Elijah Obrien'],
+                    ['name' => 'Jim Collins'],
+                    ['name' => 'Josh Hamilton'],
+                    ['name' => 'Kevin Peterson'],
+                    ['name' => 'Mike Spencer'],
+                    ['name' => 'Roger Adams'],
                 ],
                 'campaign_types' => [
                     ['name' => 'Social Media Marketing Campaign Type', 'sort_by' => '10']
